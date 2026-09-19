@@ -115,7 +115,49 @@ def Practica2() -> None:
                 None
       
 def Practica3() -> None:
-      return
+    #Matriz 4X5
+    matriz = [
+    ["1", "2", "3", "4", "5"],
+    ["2", "4", "6", "8", "10"],
+    ["3", "6", "9", "12", "15"],
+    ["4", "8", "12", "16", "20"]
+    ]
+
+    aux = 0
+    while True:
+        if aux > 3:
+            break
+        for i in range(len(matriz[aux])):
+            if i == len(matriz[aux])-1:
+                print(matriz[aux][i], end=" | ")
+            else:
+                print(matriz[aux][i], end=", ")
+        aux += 1
+    print()
+    #Aquí voy a suponer que se refiere a la columna y a la fila completa jeje, quizás se refiere a la coordenada pero no estoy seguro
+    c = int(input("Ingresa el número de columna a buscar: "))-1
+    f = int(input("Ingresa el número de fila a buscar: "))-1
+    print(f"El contenido de la columna {c+1} es: ", end=" ")
+    for i in range(4):
+        if i == 3:
+            print(matriz[i][c])
+        else:
+            print(matriz[i][c], end=", ")
+
+    print(f"\nEl contenido de la fila {f+1} es: ", end=" ")
+    for i in range(5):
+        if i == 4:
+            print(matriz[f][i])
+        else:
+            print(matriz[f][i], end=", ")
+    print("\n")
+
+    for i in range(len(matriz)):
+        for j in range(len(matriz[0])):
+                print(f"El elemento en la posición {i+1}x{j+1} es: {matriz[i][j]}")
+
+
+    return
 def Practica4() -> None:
       return
 
@@ -139,7 +181,7 @@ while True:
         case 3:
             Practica2()
         case 4:
-            Practica2()
+            Practica3()
         case 5: 
             Practica2()
         case 0:
